@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!--CUSTOM STYLE-->
+    <link rel="stylesheet" href="./styles.css">
+
+
+     <!--ICON-->
+
+     <link rel="icon" href="./images/images.png">
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+       
+   
+</head>
+
+<body>
+
+
+
+
+    <div class="container" style=" margin: auto ; ">
+        <form class="needs-validation" action="https://register-backend.herokuapp.com/sendData" method="POST" novalidate>
+
+            <fieldset class="p-4" >
+
+                <legend class="ml-0 registrationHeader p-2">
+                    Registration
+                </legend>
+                <div class="row ">
+                    <div class="col-lg-6">
+                        <!--FULL NAME-->
+                        <div class="form-group row ">
+                            <label for="inputName3" class="col-sm-2 col-form-label">Full Name</label>
+                            <div class="col-sm-10">
+
+
+                                <input type="text" class="form-control" id="inputName3" name="fName"
+                                    placeholder="Full Name" required>
+
+                                <div class="invalid-feedback">
+                                    Please enter a valid Name
+                                </div>
+                            </div>
+                        </div>
+                        <!--MOBILE-->
+                        <div class="form-group row">
+                            <label for="inputMobile3" class="col-sm-2 col-form-label">Mobile</label>
+
+
+                            <div class="col-sm-10">
+
+
+
+                                <div class="invalid-feedback">
+                                    Please enter a valid Mobile Number
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-2">
+
+                                        <input type="tel" class="form-control p-0" name="mobile1" value="+91"
+                                            style="text-align: center;" maxlength="3" disabled>
+
+                                    </div>
+
+                                    <div class="col">
+                                        <input type="tel" class="form-control" id="inputMobile3" name="mobile2"
+                                            placeholder="Mobile" maxlength="15" required>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--JOB TYPE-->
+                        <div class="form-group row" data-toggle="buttons">
+                            <label class="col-sm-2 col-form-label">Job Type
+                            </label>
+
+
+                            <div class="form-check form-check-inline pl-3">
+                                <input class="form-check-input" type="radio" name="jobType" id="inlineRadio1"
+                                    value="Full Time" required>
+                                <label class="form-check-label" for="inlineRadio1">FT </label>
+
+                            </div>
+
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="jobType" id="inlineRadio2"
+                                    value="Part Time" required>
+                                <label class="form-check-label" for="inlineRadio2">PT</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="jobType" id="inlineRadio3"
+                                    value="Consultant" required>
+                                <label class="form-check-label" for="inlineRadio3">Consultant</label>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <!--PREFERRED LOCATION-->
+
+                        <div class="form-group row">
+                            <label for="inputMobile3" class="col-sm-2 col-form-label">Pref. Location</label>
+
+                            <div class="col-sm-10 justify-content-center">
+                                <select class="custom-select" id="preferredLocationSelect"name="preferredLocation" required>
+                                    <option value="">Select City</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Bangalore">Bangalore</option>
+                                    <option value="Delhi">Delhi</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select Preferred Location
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <!--PROFILE PIC-->
+                        <div class="form-group row ">
+                            <label for="exampleFormControlFile1" class="col-sm-2 col-form-label">Profile Pic</label>
+                            <div class="col-sm-10">
+
+                                <div class="file-control">
+                                    <div class="mb-4" class="imgDiv" id="picBox">
+                                        <img class="profileImg"
+                                            src="images/upload-pic.jpg" id="blah" alt="example placeholder avatar"
+                                            onerror="this.src='images/upload-pic.jpg'">
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+
+
+                                        <input id="myClick" type="file" name="profilePic"
+                                            onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])"
+                                            hidden required>
+                                        <div class="invalid-feedback">
+                                            Please Upload Pic
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- EMAIL-->
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" name="email" id="inputEmail3"
+                                    placeholder="Email" required>
+                                <div class="invalid-feedback">
+                                    Please enter Email Id
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <!--DOB-->
+                        <div class="form-group row">
+                            <label for="inputDob3" class="col-sm-2 col-form-label">DOB</label>
+                            <div class="col-sm-10 ">
+                                <input type="date" class="form-control" accept=".png, .jpg, .jpeg" id="inputDob3"
+                                    name="date" required>
+                                <div class="invalid-feedback">
+                                    Please provide DOB
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--SUBMIT-->
+                        <div class="form-group row justify-content-center justify-content-lg-end mr-lg-1 mt-lg-5">
+                            <button class="btn m-2 submit-btn" type="submit">+ Add / Submit</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </fieldset>
+
+
+        </form>
+        <!---->
+
+        <div class="table-responsive mt-4 mb-2">
+            <table class="table table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Mobile</th>
+                        <th scope="col">DOB</th>
+                        <th scope="col">Job Type</th>
+                        <th scope="col">Action</th>
+
+
+
+                    </tr>
+                </thead>
+                <tbody id="tableData" class="align-items-center">
+
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+<script src="./script.js"></script>
+
+</html>

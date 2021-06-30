@@ -1,0 +1,85 @@
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color:#F9F9F9
+
+}
+
+fieldset{
+    border:1px solid #343A40;
+    border-radius:10px
+}
+
+
+legend{
+    background-color: #343A40;
+    color:white;
+    border-radius:2px;
+    width: auto;
+
+}
+
+
+.form-group {
+    align-items: center;
+}
+
+
+.actionTable td {
+    border-top-width: 0;
+
+}
+
+.actionTable a {
+    text-decoration: none;
+}
+
+.actionTable:hover {
+    background-color: transparent
+}
+.submit-btn{
+    background-color: #FF8800;
+    color:white;
+    border-radius:0
+
+}
+.submit-btn:hover{
+    background-color:#f18810 ;
+    color:white;
+
+}
+.submit-btn:active{
+    box-shadow: 0 0 0 2px rgb(255, 167, 66)
+}
+.submit-btn:focus{
+    box-shadow: 0 0 0 2px rgb(255, 167, 66)
+}
+
+.profileImg{
+   border:1px dashed #b4b7b9;
+   border-radius: 8px;
+}
+
+.spinner-border{
+    color:#FF8800
+}
+
+#blah {
+    width: 100px;
+    height: 100px
+}
+
+@media only screen and (max-width: 992px) {
+
+    .registrationHeader {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #picBox {
+        text-align: center;
+    }
+
+}
