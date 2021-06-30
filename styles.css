@@ -7,20 +7,20 @@ body {
 
 }
 
-fieldset{
+#fieldset{
     border:1px solid #343A40;
     border-radius:10px
 }
 
 
-legend{
+.registrationHeader{
     background-color: #343A40;
     color:white;
     border-radius:2px;
     width: auto;
+   
 
 }
-
 
 .form-group {
     align-items: center;
@@ -39,21 +39,21 @@ legend{
 .actionTable:hover {
     background-color: transparent
 }
-.submit-btn{
+#submit-btn{
     background-color: #FF8800;
     color:white;
     border-radius:0
 
 }
-.submit-btn:hover{
+#submit-btn:hover{
     background-color:#f18810 ;
     color:white;
 
 }
-.submit-btn:active{
+#submit-btn:active{
     box-shadow: 0 0 0 2px rgb(255, 167, 66)
 }
-.submit-btn:focus{
+#submit-btn:focus{
     box-shadow: 0 0 0 2px rgb(255, 167, 66)
 }
 
