@@ -28,10 +28,7 @@
                     event.stopPropagation();
                 }
                 
-                if(form.checkValidity() === true){
-                refreshData()
-                     
-                }
+               
                 form.classList.add('was-validated');
 
             }, false);
